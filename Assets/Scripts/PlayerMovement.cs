@@ -1,16 +1,16 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float speed = 12f;
     [SerializeField] private float sprintSpeed = 24f;
-    [SerializeField] private float jumpHeight = 3f;
+    [SerializeField] private float jumpHeight = 6f;
     [SerializeField] private float crouchSpeed = 6f;
 
     [Header("Physics")]
-    [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float gravity = -20f;
 
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
@@ -124,7 +124,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
-            playerVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            playerVelocity.y = Mathf.Sqrt(jumpHeight * -1 * gravity);
+
+            //playerVelocity.y = Mathf.Sqrt(jumpHeight * gravity) * -1f;
         }
 
         playerVelocity.y += gravity * Time.deltaTime;
