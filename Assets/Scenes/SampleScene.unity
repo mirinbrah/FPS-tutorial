@@ -344,9 +344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a84a39feea60254e88a7f6298e96683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCamera: {fileID: 330585546}
   speed: 12
-  jumpHeight: 6
+  sprintSpeed: 24
   crouchSpeed: 6
+  jumpHeight: 6
   gravity: -19.62
   groundCheck: {fileID: 2034054395}
   groundDistance: 0.4
