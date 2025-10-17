@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform playerCamera;
 
-    //[Header("Movement")]
+    [Header("Movement")]
     public float speed = 12f;
     public float sprintSpeed = 18f;
     public float crouchSpeed = 6f;
