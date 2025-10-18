@@ -8,7 +8,7 @@ public class Target : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject healthBarPrefab;
-    [SerializeField] private Vector3 healthBarOffset = new Vector3(0, 1.5f, 0);
+    [SerializeField] private Vector3 healthBarOffset = new Vector3(0, 5f, 0);
 
     private TextMeshProUGUI healthText;
 
