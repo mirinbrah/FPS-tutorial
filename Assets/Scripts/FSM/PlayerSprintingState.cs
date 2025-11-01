@@ -6,6 +6,7 @@ public class PlayerSprintingState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.SetCurrentSpeed(_ctx.sprintSpeed);
+        _ctx.ArmsAnimator.CrossFade("Run", 0.1f);
     }
 
     public override void UpdateState()

@@ -7,6 +7,10 @@ public class PlayerStateFactory
         _context = currentContext;
     }
 
+    public PlayerBaseState Idle()
+    {
+        return new PlayerIdleState(_context, this);
+    }
     public PlayerBaseState Walking()
     {
         return new PlayerWalkingState(_context, this);
@@ -25,6 +29,6 @@ public class PlayerStateFactory
     }
     public PlayerBaseState Grounded() 
     {
-        return Walking();
+        return Idle();
     }
 }

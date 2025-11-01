@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
 
+
+    [Header("Animator")]
+    [SerializeField] private Animator armsAnimator;
+
     private PlayerBaseState _currentState;
     private PlayerStateFactory _states;
 
@@ -37,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     public bool IsJumpPressed { get; private set; }
 
     public PlayerBaseState CurrentState { get => _currentState; set => _currentState = value; }
+
+    public Animator ArmsAnimator { get => armsAnimator; }
 
     private void Awake()
     {
