@@ -6,6 +6,9 @@ public class WeaponData : ScriptableObject
     [Header("Info")]
     public string weaponName;
 
+    [Header("Visuals")]
+    public WeaponModel weaponPrefab;
+
     [Header("Shooting")]
     public float damage;
     public float range;

@@ -1,3 +1,4 @@
+using UnityEngine;
 public class PlayerWalkingState : PlayerBaseState
 {
     public PlayerWalkingState(PlayerMovement currentContext, PlayerStateFactory playerStateFactory)
@@ -6,7 +7,7 @@ public class PlayerWalkingState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.SetCurrentSpeed(_ctx.speed);
-        _ctx.ArmsAnimator.CrossFade("Run", 0.1f);
+        //_ctx.ArmsAnimator.CrossFade("Run", 0.1f);
     }
 
     public override void UpdateState()

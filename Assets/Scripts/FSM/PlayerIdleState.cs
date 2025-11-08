@@ -6,7 +6,7 @@ public class PlayerIdleState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.SetCurrentSpeed(0f);
-        _ctx.ArmsAnimator.CrossFade("Idle", 0.1f);
+        //_ctx.ArmsAnimator.CrossFade("Idle", 0.1f);
     }
 
     public override void UpdateState()

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: ShotgunData
   m_EditorClassIdentifier: 
   weaponName: Shotgun
+  weaponPrefab: {fileID: 2262159231468915535, guid: 28d6fc1c265521546afa4e94cf9f24cb, type: 3}
   damage: 15
-  range: 15
+  range: 100
   fireRate: 1
-  bulletsPerShot: 8
-  spread: 5
+  bulletsPerShot: 4
+  spread: 20
   isAutomatic: 0
   projectilePrefab: {fileID: 495194887821002173, guid: 3a5ac61ce8a433a4fa088f995b9ad035, type: 3}
-  projectileSpeed: 5
-  projectileLifetime: 2
+  projectileSpeed: 10
+  projectileLifetime: 10

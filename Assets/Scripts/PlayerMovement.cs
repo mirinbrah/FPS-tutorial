@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Animator")]
-    [SerializeField] private Animator armsAnimator;
+    //[SerializeField] private Animator armsAnimator;
 
     private PlayerBaseState _currentState;
     private PlayerStateFactory _states;
@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     public PlayerBaseState CurrentState { get => _currentState; set => _currentState = value; }
 
-    public Animator ArmsAnimator { get => armsAnimator; }
+    //public Animator ArmsAnimator { get => armsAnimator; }
 
     private void Awake()
     {
