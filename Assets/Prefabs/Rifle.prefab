@@ -265,6 +265,7 @@ MonoBehaviour:
   middle_Target: {fileID: 5104699901382840037}
   ring_Target: {fileID: 3309536866015323904}
   pinky_Target: {fileID: 3524931099521772562}
+  shootingPoint: {fileID: 1215213841813170241}
 --- !u!1 &4827835583893366350
 GameObject:
   m_ObjectHideFlags: 0

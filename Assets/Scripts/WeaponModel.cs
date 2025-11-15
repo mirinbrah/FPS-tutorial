@@ -9,4 +9,7 @@ public class WeaponModel : MonoBehaviour
     public Transform middle_Target;
     public Transform ring_Target;
     public Transform pinky_Target;
+
+    [Header("Shooting point")]
+    public Transform shootingPoint;
 }

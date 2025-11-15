@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RifleData
   m_EditorClassIdentifier: 
   weaponName: Rifle
-  weaponPrefab: {fileID: 5375832808188444420, guid: 7132793f4bff8ea4da2e42e0249a2dea, type: 3}
+  prefab: {fileID: 4308201821811263753, guid: 7132793f4bff8ea4da2e42e0249a2dea, type: 3}
   damage: 25
   range: 100
   fireRate: 10

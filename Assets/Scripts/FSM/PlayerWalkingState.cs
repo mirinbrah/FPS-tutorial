@@ -1,4 +1,3 @@
-using UnityEngine;
 public class PlayerWalkingState : PlayerBaseState
 {
     public PlayerWalkingState(PlayerMovement currentContext, PlayerStateFactory playerStateFactory)
@@ -7,7 +6,6 @@ public class PlayerWalkingState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.SetCurrentSpeed(_ctx.speed);
-        //_ctx.ArmsAnimator.CrossFade("Run", 0.1f);
     }
 
     public override void UpdateState()
@@ -19,12 +17,7 @@ public class PlayerWalkingState : PlayerBaseState
 
     public override void CheckSwitchStates()
     {
-        if (!_ctx.IsMovementPressed)
-        {
-            SwitchState(_factory.Idle());
-        }
-
-        else if (!_ctx.IsGrounded)
+        if (!_ctx.IsGrounded)
         {
             SwitchState(_factory.InAir());
         }
