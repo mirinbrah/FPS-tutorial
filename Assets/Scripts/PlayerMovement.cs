@@ -125,4 +125,18 @@ public class PlayerMovement : MonoBehaviour
             playerCamera.localPosition = _cameraOriginalPos;
         }
     }
+
+    public float CurrentHorizontalSpeed
+    {
+        get
+        {
+            Vector3 horizontalVelocity = new Vector3(_controller.velocity.x, 0, _controller.velocity.z);
+            return horizontalVelocity.magnitude;
+        }
+    }
+
+    public float CurrentVerticalVelocity
+    {
+        get { return _controller.velocity.y; }
+    }
 }

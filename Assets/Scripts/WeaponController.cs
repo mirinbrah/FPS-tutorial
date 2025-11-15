@@ -78,7 +78,7 @@ public class WeaponController : MonoBehaviour
 
     private void Shoot()
     {
-        if (currentWeaponInstance == null || currentWeaponInstance.shootingPoint == null) return;
+        if (currentWeaponInstance == null) return;
 
         for (int i = 0; i < currentWeaponData.bulletsPerShot; i++)
         {
