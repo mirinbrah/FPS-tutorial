@@ -6,6 +6,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Transform weaponHolder;
     [SerializeField] private List<WeaponData> availableWeapons;
+    [SerializeField] private WeaponIK weaponIK;
 
     private WeaponData currentWeaponData;
     private WeaponModel currentWeaponInstance;
@@ -64,6 +65,11 @@ public class WeaponController : MonoBehaviour
         weaponObject.transform.localRotation = Quaternion.identity;
 
         currentWeaponInstance = weaponObject.GetComponent<WeaponModel>();
+
+        if (weaponIK != null)
+        {
+            weaponIK.SetCurrentWeapon(currentWeaponInstance);
+        }
     }
 
     void UnequipWeapon()
@@ -73,6 +79,11 @@ public class WeaponController : MonoBehaviour
             Destroy(currentWeaponInstance.gameObject);
             currentWeaponInstance = null;
             currentWeaponData = null;
+
+            if (weaponIK != null)
+            {
+                weaponIK.SetCurrentWeapon(null);
+            }
         }
     }
 

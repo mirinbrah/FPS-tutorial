@@ -235,12 +235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc6f40184462c442b27a5e458baacdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHandGrip: {fileID: 4203002030343536520}
-  thumb_Target: {fileID: 9059564325015931521}
-  index_Target: {fileID: 7115946706557108552}
-  middle_Target: {fileID: 2851128914659050463}
-  ring_Target: {fileID: 8301901051727881543}
-  pinky_Target: {fileID: 2028603237572673979}
+  leftHandGrip: {fileID: 4203002030343536520}
+  thumb_Grip: {fileID: 9059564325015931521}
+  index_Grip: {fileID: 7115946706557108552}
+  middle_Grip: {fileID: 2851128914659050463}
+  ring_Grip: {fileID: 8301901051727881543}
+  pinky_Grip: {fileID: 2028603237572673979}
   shootingPoint: {fileID: 6185908660004521014}
 --- !u!1 &6435477838273539775
 GameObject:
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4203002030343536520}
   m_Layer: 0
-  m_Name: RightHandGrip
+  m_Name: LeftHandGrip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
