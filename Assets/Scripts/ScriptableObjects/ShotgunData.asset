@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShotgunData
   m_EditorClassIdentifier: 
   weaponName: Shotgun
-  prefab: {fileID: 1816250723446262323, guid: d2f64b6b4d7821c47a6ff0886b805db9, type: 3}
+  prefab: {fileID: 2601958965744220426, guid: d7e3008971813474f81f4dcddf504468, type: 3}
   damage: 15
   range: 15
   fireRate: 1
