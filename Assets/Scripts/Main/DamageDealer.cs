@@ -3,14 +3,19 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] private float damageAmount = 50f;
+    [SerializeField] private float damageInterval = 1f; 
+    private float nextDamageTime;
 
     private void OnTriggerStay(Collider other)
     {
-        Player playerHealth = other.GetComponentInParent<Player>();
+        if (Time.time < nextDamageTime) return;
 
-        if (playerHealth != null)
+        Health health = other.GetComponentInParent<Health>();
+
+        if (health != null)
         {
-            playerHealth.TakeDamage(damageAmount);
+            health.TakeDamage(damageAmount);
+            nextDamageTime = Time.time + damageInterval;
         }
     }
 }

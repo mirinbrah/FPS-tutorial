@@ -1,11 +1,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Collider))]
 public class Projectile : MonoBehaviour
 {
-    public float damage;
-    public float speed;
+    public float damage = 10f;
+    public float speed = 20f;
     public float lifetime = 5f;
 
     private Rigidbody rb;
@@ -19,10 +18,9 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Target target = collision.gameObject.GetComponent<Target>();
-        if (target != null)
+        if (collision.gameObject.TryGetComponent(out Health healthComponent))
         {
-            target.TakeDamage(damage);
+            healthComponent.TakeDamage(damage);
         }
 
         Destroy(gameObject);
