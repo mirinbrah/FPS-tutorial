@@ -1,12 +1,14 @@
-using UnityEngine;
 using System; 
+using UnityEngine;
+using UnityEngine.Events;
 
 public class WeaponPickup : MonoBehaviour
 {
+
     public int weaponIndex;
     public string weaponName;
 
-    public event Action OnPickedUp;
+    public UnityEvent OnPlayerPickUp;
 
     private Renderer rend;
     private Color originalColor;
@@ -21,27 +23,13 @@ public class WeaponPickup : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        OnPickedUp += HandlePickup;
-    }
-
-    private void OnDisable()
-    {
-        OnPickedUp -= HandlePickup;
-    }
-
     public void PerformPickup()
     {
-        OnPickedUp?.Invoke();
-    }
-
-    private void HandlePickup()
-    {
         Debug.Log($"Предмет {weaponName} был подобран и сейчас исчезнет.");
-
-        Destroy(gameObject); 
+        OnPlayerPickUp.Invoke();
+        Destroy(gameObject);
     }
+
 
     public void ToggleHighlight(bool active)
     {

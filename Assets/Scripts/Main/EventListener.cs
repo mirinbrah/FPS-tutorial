@@ -10,7 +10,7 @@ public class EventListener : MonoBehaviour
         {
             if (block != null)
             {
-                block.OnPlayerEnterCSharp += HandleCSharpEvent;
+                block.OnPlayerEnterCSharp += DothingForMe;
             }
         }
     }
@@ -21,15 +21,20 @@ public class EventListener : MonoBehaviour
         {
             if (block != null)
             {
-                block.OnPlayerEnterCSharp -= HandleCSharpEvent;
+                block.OnPlayerEnterCSharp -= DothingForMe;
             }
         }
     }
 
-    private void HandleCSharpEvent(string blockName)
+    private void DothingForMe(string blockName)
     {
-        Debug.Log($"<color=green>[C# LISTENER]</color> Кодом поймано событие от: {blockName}");
+        Debug.Log($"<color=green>[C# LISTENER]</color> Кодом поймано событие от: {blockName}, я функция DothingForMe");
     }
+
+    //private void HandleCSharpEvent(string blockName)
+    //{
+    //    Debug.Log($"<color=green>[C# LISTENER]</color> Кодом поймано событие от: {blockName}");
+    //}
 
     public void HandleUnityEvent()
     {
